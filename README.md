@@ -25,3 +25,23 @@ A simple and responsive Tip Calculator that calculates the total bill amount bas
 
 https://sivarakshana3207.github.io/JavaScript-Projects/Tip_Calculator/
 
+## Project 2: Age Calculator
+
+A simple and responsive Age Calculator that calculates the user's exact age in years, months, and days based on the selected birth date.
+
+### Features
+
+* Select birth date
+* Calculates age in years, months, and days
+* Responsive UI
+* Modern design using Tailwind CSS
+
+### Technologies Used
+
+* HTML5
+* Tailwind CSS
+* JavaScript
+
+### Live Demo
+
+https://sivarakshana3207.github.io/JavaScript-Projects/Age_Calculator/

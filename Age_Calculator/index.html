@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+
+  <!-- Tailwind CSS -->
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="p-0 m-0 bg-[#081229]">
+  <section>
+    <div class="bg-white/80 shadow-2xl rounded-2xl mx-5 sm:mx-auto flex flex-col justify-center sm:max-w-md mt-[100px] p-10">
+        <h1 class="font-bold text-3xl text-center">Age <span class="bg-gradient-to-r from-cyan-600 to-purple-950 bg-clip-text text-transparent">Calculator</span></h1>
+        <form action="" class="mt-8">
+            <label for="birth-date">Select your Birth Date</label><br>
+            <input id="birth-date" type="date" class="w-full p-2.5 rounded bg-sky-50 mt-2 outline-none hover:cursor-pointer">
+        </form>
+        <button class="rounded mt-5 shadow-md shadow-blue-300 bg-gradient-to-r from-indigo-500 to-sky-600 p-2.5 text-white font-semibold hover:cursor-pointer" id="calculate-btn">Calculate Now</button>
+        <div class="flex justify-between">
+            <div class="py-3 px-8 rounded-2xl mt-5 text-center border-2 border-gray-700"><span class="text-3xl font-bold bg-gradient-to-r from-cyan-700 to-blue-900 bg-clip-text text-transparent" id="years">00</span> <br> YEARS</div>
+            <div class="py-3 px-5 rounded-2xl mt-5 text-center border-2 border-gray-700"><span class="text-3xl font-bold bg-gradient-to-r from-cyan-700 to-blue-900 bg-clip-text text-transparent" id="months">00</span> <br> MONTHS</div>
+            <div class="py-3 px-8 rounded-2xl mt-5 text-center border-2 border-gray-700"><span class="text-3xl font-bold bg-gradient-to-r from-cyan-700 to-blue-900 bg-clip-text text-transparent" id="days">00</span> <br> DAYS</div>
+        </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
