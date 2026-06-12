@@ -5,19 +5,32 @@ const dayEl = document.getElementById("days");
 const calculateBtn = document.getElementById("calculate-btn");
 
 calculateBtn.addEventListener("click", () => {
-    const currYear = new Date().getFullYear();
-    const currMonth = new Date().getMonth()+1;
-    const currDay = new Date().getDate();
+    const today = new Date();
+    const birthDate = new Date(bdEl.value);
 
-    const bd = bdEl.value;
-    const [year,month,day] = bd.split("-");
+    let years = today.getFullYear() - birthDate.getFullYear();
+    let months = today.getMonth() - birthDate.getMonth();
+    let days = today.getDate() - birthDate.getDate();
 
-    const ageYear = currYear-year;
-    const ageMonth = currMonth-month;
-    const ageDays = currDay-day;
+    if (days < 0) {
+        months--;
 
-    yearEl.textContent = ageYear;
-    monthEl.textContent = ageMonth;
-    dayEl.textContent = ageDays;
+        const lastMonthDays = new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            0
+        ).getDate();
+
+        days += lastMonthDays;
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    yearEl.textContent = years;
+    monthEl.textContent = months;
+    dayEl.textContent = days;
 })
 
